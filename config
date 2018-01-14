@@ -36,6 +36,9 @@ bindsym $mod+u exec i3-sensible-terminal
 # start firefox
 bindsym $mod+Shift+f exec firefox
 
+#start network manager
+bindsym $mod+Shift+m exec --no-startup-id nm-applet
+
 #move firefox to current workspace
 bindsym $mod+F1 [class="Firefox"] move workspace current
 
@@ -76,7 +79,7 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 # default already 
-#bindsym $mod+h split h
+bindsym $mod+Mod4+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -159,11 +162,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # sound keys 
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 2%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 2%-
-#bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
-#
+bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
+
 #  set brightness
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 1 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 1 # decrease screen brightness
+#  install light from https://github.com/haikarainen/light.git
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 #Screenshot
 bindsym $mod+p exec "scrot ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
