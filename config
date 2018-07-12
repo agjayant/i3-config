@@ -153,6 +153,10 @@ bindsym Mod4+Shift+8 move container to workspace 8
 bindsym Mod4+Shift+9 move container to workspace 9
 bindsym Mod4+Shift+0 move container to workspace 10
 
+# move workspaces to a different screen
+bindsym Mod4+Right move workspace to output right
+bindsym Mod4+Left move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -171,6 +175,7 @@ bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 #Screenshot
 bindsym $mod+p exec "scrot ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
+bindsym $mod+Shift+p exec "scrot -s ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
 
 # to toggle wifi
 bindsym $mod+t exec ~/.config/i3/scripts/toggle-wifi.sh
