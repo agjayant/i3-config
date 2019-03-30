@@ -161,33 +161,61 @@ bindsym Mod4+Shift+0 move container to workspace 10
 bindsym Mod4+Right move workspace to output right
 bindsym Mod4+Left move workspace to output left
 
+##########################################################
+
+# Montreal Office Setup
+# arandr to check names of screens
+
+set $left DP-3-2
+set $right DP-3-1
+set $laptop eDP-1
+
+# detach screens
+bindsym $mod+Shift+d exec xrandr --output $left --off --output $right --off
+
+# attach screens
+# TODO: attach workspaces to screens 
+bindsym $mod+Shift+a exec "xrandr --output $right --auto --left-of $laptop --output $left --auto --left-of $right"
+
+
+##########################################################
+
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 # sound keys 
+# FIXME
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 2%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
 
 #  set brightness
+#  FIXME
 #  install light from https://github.com/haikarainen/light.git
 bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
-#Screenshot
+# Screenshot
+## FIXME
 bindsym $mod+p exec "scrot ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
 bindsym $mod+Shift+p exec "scrot -s ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
 
 # to toggle wifi
 bindsym $mod+t exec ~/.config/i3/scripts/toggle-wifi.sh
 
-exec --no-startup-id feh --bg-fill ~/.config/i3/Pictures/desktop.png
-exec xinput set-prop 11 283 1
-exec xinput set-prop 11 273 1
-exec xinput set-prop 11 281 1.000000
+## TODO : toggle vpn
+
+# Background
+## FIXME
+#exec --no-startup-id feh --bg-fill ~/.config/i3/Pictures/desktop.png
+#exec xinput set-prop 11 283 1
+#exec xinput set-prop 11 273 1
+#exec xinput set-prop 11 281 1.000000
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
