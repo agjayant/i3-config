@@ -166,20 +166,13 @@ bindsym Mod4+Left move workspace to output left
 # Montreal Office Setup
 # arandr to check names of screens
 
-set $left DP-3-2
-set $right DP-3-1
-set $laptop eDP-1
-
 # detach screens
-bindsym $mod+Shift+d exec xrandr --output $left --off --output $right --off
+bindsym $mod+Shift+d exec ~/.config/i3/scripts/detach_screens.sh
 
 # attach screens
-# TODO: attach workspaces to screens 
-bindsym $mod+Shift+a exec "xrandr --output $right --auto --left-of $laptop --output $left --auto --left-of $right"
-
+bindsym $mod+Shift+a exec ~/.config/i3/scripts/attach_screens.sh
 
 ##########################################################
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
