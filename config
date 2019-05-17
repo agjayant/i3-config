@@ -309,3 +309,6 @@ bar {
 
 #for_window [class="google-chrome-stable"] floating enable
 hide_edge_borders both
+
+# toggle on i3-input
+bindsym Mod4+r exec i3-input
