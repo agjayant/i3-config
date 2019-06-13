@@ -80,11 +80,9 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 # default already 
-bindsym $mod+Mod4+h split h
 bindsym $mod+backslash split h
 
 # split in vertical orientation
-bindsym $mod+v split v
 bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
@@ -229,15 +227,9 @@ bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
 bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
-# Screenshot
-## FIXME
-bindsym $mod+p exec "scrot ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
-bindsym $mod+Shift+p exec "scrot -s ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
-
-# to toggle wifi
+# to toggle wifi and vpn
 bindsym $mod+t exec ~/.config/i3/scripts/toggle-wifi.sh
-
-## TODO : toggle vpn
+bindsym $mod+v exec ~/.config/i3/scripts/toggle-vpn.sh
 
 # Background
 ## FIXME
