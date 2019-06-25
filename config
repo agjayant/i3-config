@@ -94,8 +94,8 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # for lock
-#bindsym Mod4+l exec i3lock -i ~/.config/i3/Pictures/ilock.png -c 000000 
-bindsym Mod4+l exec i3lock -c 000000
+#bindsym Mod4+l exec i3lock -c 000000
+bindsym Mod4+l exec ~/.config/i3/scripts/i3lock-multimonitor/lock 
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
