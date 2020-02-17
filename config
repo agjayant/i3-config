@@ -94,8 +94,8 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # for lock
-#bindsym Mod4+l exec i3lock -c 000000
-bindsym Mod4+l exec ~/.config/i3/scripts/i3lock-multimonitor/lock 
+bindsym Mod4+l exec i3lock -c 000000
+#bindsym Mod4+l exec ~/.config/i3/scripts/i3lock-multimonitor/lock 
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -202,9 +202,11 @@ bindsym Mod4+Left move workspace to output left
 
 # detach screens
 bindsym $mod+Shift+d exec ~/.config/i3/scripts/detach_screens.sh
+bindsym XF86Launch9 exec ~/.config/i3/scripts/detach_screens.sh
 
 # attach screens
 bindsym $mod+Shift+a exec ~/.config/i3/scripts/attach_screens.sh
+bindsym XF86Launch5 exec ~/.config/i3/scripts/attach_screens.sh
 
 ##########################################################
 

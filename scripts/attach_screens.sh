@@ -5,6 +5,8 @@ right=DP-3-1
 laptop=eDP-1
 
 xrandr --output $right --auto --left-of $laptop --output $left --auto --left-of $right 
+xrandr --output $left --rotate left
+
 i3-msg "workspace number 12, move workspace to output $left"
 i3-msg "workspace number 13, move workspace to output $left"
 i3-msg "workspace number 14, move workspace to output $left"
