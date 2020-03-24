@@ -202,11 +202,12 @@ bindsym Mod4+Left move workspace to output left
 
 # detach screens
 bindsym $mod+Shift+d exec ~/.config/i3/scripts/detach_screens.sh
-bindsym XF86Launch9 exec ~/.config/i3/scripts/detach_screens.sh
 
 # attach screens
 bindsym $mod+Shift+a exec ~/.config/i3/scripts/attach_screens.sh
-bindsym XF86Launch5 exec ~/.config/i3/scripts/attach_screens.sh
+
+# rotate right
+bindsym $mod+Shift+Ctrl+r exec ~/.config/i3/scripts/rotate_right.sh
 
 ##########################################################
 

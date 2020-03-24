@@ -1,6 +1,5 @@
 #!/bin/bash
 
-left=DP-3-2
-right=DP-3-1
+left=DP-2
 
-xrandr --output $left --off --output $right --off
+xrandr --output $left --off 
