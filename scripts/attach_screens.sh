@@ -1,6 +1,6 @@
 #!/bin/bash
 
-left=DP-2
+left=DP-3-1
 laptop=eDP-1
 
 xrandr --output $left --auto --left-of $laptop 
